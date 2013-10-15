@@ -1,0 +1,22 @@
+//created on: Oct 14, 2013
+package org.sample
+
+import org.sample.Message;
+
+
+
+//declare any global variables here
+
+
+
+
+rule "Hello World"
+
+    when
+        message:Message(type=='Hello')
+    then
+        message.printMessage();
+
+end
+
+

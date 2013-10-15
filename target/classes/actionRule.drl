@@ -1,0 +1,23 @@
+//created on: Oct 15, 2013
+package org.sample.action
+
+import org.sample.Action;
+import org.sample.Message;
+
+
+
+//declare any global variables here
+
+
+
+
+rule "Act on high value in message"
+
+    when
+        message:Message(messageValue > 17)
+    then
+        Action action = new Action();
+        action.performAction(message);
+
+end
+
